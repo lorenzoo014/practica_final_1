@@ -8,15 +8,15 @@ You can assume that 1 Bitcoin is worth 40,000€
 ===> You've redeemed a hint. Replace the _'s with code to complete
 this exercise.
 """
-investment_in_bitcoin = 1.2
-bitcoin_to_euros = 20000
+bitcoin_amount = float(input("¿cuanta cantidad de BTC posee?"))
+bitcoin_value_euros = int(input("introduzca el valor de mercado"))
 # 1) write a function to calculate bitcoin to euros
-def bitcoinToEuros(investment_in_bitcoin,bitcoin_to_euros):
-    usd_value = investment_in_bitcoin * bitcoin_to_euros
-    return usd_value
+def bitcoinToEuros( bitcoin_amount, bitcoin_value_euros):
+    euros_value =  bitcoin_amount *  bitcoin_value_euros
+    return euros_value
 
 
-investment_in_usd = bitcoinToEuros(investment_in_bitcoin, bitcoin_to_euros)
+investment_in_usd = bitcoinToEuros(bitcoin_amount,bitcoin_value_euros)
 if investment_in_usd <= 30000:
     print("Investment below 30,000€! SELL!")
 else:
